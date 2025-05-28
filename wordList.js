@@ -1,4 +1,5 @@
 const wordList = [
+  "aahed",
   "aahing",
   "aahs",
   "aalii",
