@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f0f8ff;
+  margin: 0;
+  padding: 20px;
+}
+
+#hex-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.hex-row {
+  display: flex;
+  justify-content: center;
+  line-height: 0; /* removes vertical space */
+}
+
+/* Offset even rows for staggered layout */
+.hex-row:nth-child(even) {
+  margin-left: 35px;
+}
+
+.hex {
+  width: 64px;
+  height: 74px;
+  background: #4a90e2;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  clip-path: polygon(
+    50% 0%, 
+    93% 25%, 
+    93% 75%, 
+    50% 100%, 
+    7% 75%, 
+    7% 25%
+  );
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+  padding: 0;
+  margin: 0;
+  transform: scaleY(0.87); /* hex tiling compression fix */
+}
+
+.hex:hover {
+  background: #357ab8;
+}
+
+.used {
+  background: #999 !important;
+}
